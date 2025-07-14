@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎉 Happy 25th Birthday! 🎂</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f7c8ff, #d2e0fb, #ffe5b4);
+      background-size: 300% 300%;
+      animation: bgShift 10s ease infinite;
+      overflow-x: hidden;
+    }
+
+    @keyframes bgShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .canvas-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: 100vw;
+      height: 100vh;
+      background: 
+        url("images/WhatsApp Image 2025-07-12 at 21.31.02_fe1d5575.jpg") no-repeat left center,
+        
+        url("images/WhatsApp Image 2025-07-12 at 21.31.03_ab741c51.jpg") no-repeat center center,
+        url("images/WhatsApp Image 2025-07-12 at 21.31.03_a88a19f2.jpg") no-repeat right center;
+      background-size: 33.33% 100%, 33.33% 100%, 33.33% 100%;
+      opacity: 0.5;
+    }
+
+    .content {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+      text-shadow: 2px 2px 6px #00000050;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .heading {
+      font-size: 3rem;
+      animation: fadeInScale 2s ease-in-out;
+    }
+
+    .subtext {
+      font-size: 1.5rem;
+      margin-top: 20px;
+      max-width: 700px;
+      animation: fadeInUp 3s ease-in-out;
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .balloons {
+      position: absolute;
+      bottom: -100px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-evenly;
+      z-index: 5;
+    }
+
+    .balloon {
+      position: relative;
+      width: 60px;
+      height: 80px;
+      background-color: #f06292;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .balloon::after {
+      content: "";
+      position: absolute;
+      top: 80px;
+      left: 50%;
+      width: 2px;
+      height: 50px;
+      background-color: #555;
+      transform: translateX(-50%);
+    }
+
+    .balloon:nth-child(2) {
+      background-color: #ba68c8;
+      animation-delay: 1s;
+    }
+
+    .balloon:nth-child(3) {
+      background-color: #4fc3f7;
+      animation-delay: 2s;
+    }
+
+    .balloon:nth-child(4) {
+      background-color: #81c784;
+      animation-delay: 3s;
+    }
+
+    @keyframes float {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(-200px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="canvas-container"></div>
+
+  <div class="content">
+    <div class="heading">🎉 Happy 25th Birthday! 🎂</div>
+    <div class="subtext">
+      Wishing you a vibrant, colorful, and joy-filled celebration. May this year bring you success, love, and endless smiles! 🌈🎁✨
+    </div>
+  </div>
+
+  <div class="balloons">
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+  </div>
+
+  <script>
+    // You can add additional JS-based animations here if needed
+  </script>
+</body>
+</html>
